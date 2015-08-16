@@ -38,3 +38,27 @@ ie:
 for(i in seq_along(x) {
 	## do something
 }
+
+
+Lazy evaluation:
+R will only evaluate arguments as they are utilized
+ie. func(a, b) could be run with f(5) if 'b' is never used in function
+
+
+Working with many csv files:
+var1 <- read.csv("dir1/file.csv")  ## reads the csv to a variable 'var1'
+head(var1)  ## outputs the first few rows of data
+length(var1$ColVal)  ## produces the number of rows for the column 'ColVal' in the var1 dataset
+dim(var1)  ## this produces all the dimension info for the dataset
+summary(var1)  ## can provide a statistical summary of the data
+subset(var1$Weight, var1$Day==30)  ## produces a subset of the data with "weight" column and for rows where day==30
+files_full <- list.files("diet_data", full.names=TRUE)  ## assigns the list of files into the variable with full pathnames
+andy_david <- rbind(andy, read.csv(files_full[2]))  ## appends/binds 'andy' data with 'david' data
+
+## rbind in conjunction with a for-loop can enable you to append multiple files together
+dat <- data.frame()
+for (i in 1:5) {
+        dat <- rbind(dat, read.csv(files_full[i]))
+}
+str(dat)
+
