@@ -1,0 +1,40 @@
+To extract specific rows of data based on specified condition(s):
+x <- "data.csv"
+y <- subset(x, condition(s))
+
+
+To extract a set of columns from data frame:
+z <- x[1:3]   ##this would extract columns 1-3 of the data and store it in the variable "z"
+
+
+To print the mean of each column (where x is the data):
+colMeans(x, TRUE)  ## TRUE tells the function to ignore NA's
+
+
+To create a simple vector (concatenate):
+c(value1, value2, ... etc)
+
+
+To access help docs on a function, type '?' and then the function:
+ie. '?c' will provide the help docs on c()
+
+
+A lot of file commands (like create and rename) can be found with the command prefix 'file.'
+
+
+To delete a directory:
+unlink("directory", recursive = TRUE)
+
+
+for loop structure:
+
+for(i in 1:10) {
+	## do something
+}
+
+## can also use 'seq_along(variable)' which produces the length of the vector variable
+
+ie:
+for(i in seq_along(x) {
+	## do something
+}
