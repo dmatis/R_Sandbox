@@ -62,3 +62,7 @@ for (i in 1:5) {
 }
 str(dat)
 
+
+To utilize an R script:
+source('script_name.R')  ## enter this in the console while in the containing directory of the script file
+
