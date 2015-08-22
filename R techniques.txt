@@ -84,3 +84,28 @@ printmessage <- function(x) {
 		print("x is less than or equal to zero")
 	invisible(x)
 }
+
+
+str(x)  ## An extremely useful tool that provides info about the function or variable that you pass in
+
+ie. str(airquality_dataset)  ## will provide a breakdown of elements in the dataset
+ 
+
+Subsetting a vector:
+
+x <- c("a", "b", "c", "d")
+
+x[1]  ## outputs "a" because it is the first element in vector 'x'
+x[1:4]  ## outputs "a" "b" "c" "d"
+x[x > "a"]  ## will only output the letters greater than "a"
+
+u <- x > "a"  ## similar to piping in linux, will output a logical vector to 'u' where TRUE is given
+## for each element if greater than "a", FALSE otherwise
+
+
+Subsetting a matrix:
+
+u <- matrix(1:6, 2, 3)  ## this produces a matrix with values 1:6, with 2 rows and 3 columns. Values in matrix populate from top left to bottom left, then next column ...etc
+u[1,2]  ## will produce a vector of the value in the 1st row and 2nd column, so the value 3
+u[1,]   ## this will subset out the entire 1st row of the matrix 'u'
+u[,2]   ## this will subset the entire 2nd column from 'u'
