@@ -66,3 +66,21 @@ str(dat)
 To utilize an R script:
 source('script_name.R')  ## enter this in the console while in the containing directory of the script file
 
+
+lapply()  #will apply a function over each element in a list
+sapply()  #simpler version of lapply(), returns a vector of values
+
+rowSums, rowMeans, colSums, colMeans   #optimized functions to sum up columns/rows or take the means
+
+
+invisible(x)  # won't print the last line of a function to the console
+
+ie:
+
+printmessage <- function(x) {
+	if (x > 0)
+		print("x is greater than zero")
+	else
+		print("x is less than or equal to zero")
+	invisible(x)
+}
