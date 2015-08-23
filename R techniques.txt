@@ -109,3 +109,10 @@ u <- matrix(1:6, 2, 3)  ## this produces a matrix with values 1:6, with 2 rows a
 u[1,2]  ## will produce a vector of the value in the 1st row and 2nd column, so the value 3
 u[1,]   ## this will subset out the entire 1st row of the matrix 'u'
 u[,2]   ## this will subset the entire 2nd column from 'u'
+
+
+R Profiler  ## Useful tool for discovering where time is spent on a function (optimization tool)
+## Still requires a performance analysis in order to optimize where the function is being slow
+
+system.time()  ## Evaluates a given expression to determine how long it takes to run (in seconds)
+
