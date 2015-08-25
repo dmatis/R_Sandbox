@@ -116,3 +116,16 @@ R Profiler  ## Useful tool for discovering where time is spent on a function (op
 
 system.time()  ## Evaluates a given expression to determine how long it takes to run (in seconds)
 
+Rprof()  ## starts the profiler, will keep track of function call stack at regular intervals
+summaryRprof()  ## summarizes output from Rprof()
+
+
+rpois(n, mean)  ## random poisson distrib. with n values around the mean
+## can also 'set.seed(value)' to set the desired 'random' value algorithm for consistent simulation results
+
+
+rep(x, ...)  ## replicates values in vector 'x' by the given conditions
+ie: x <- rep(0:1, each = 5)  ## produces: 0 0 0 0 0 1 1 1 1 1
+
+
+rnorm(x, mean, sd, ...)  ## produces 'x' number of random variables around 'mean' with 'sd'
